@@ -4,113 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inspira</title>
-    <style>
-      :root {
-        color-scheme: light;
-        --bg-start: #f6efe3;
-        --bg-end: #dce8f6;
-        --panel: rgba(255, 255, 255, 0.82);
-        --text: #1d2a38;
-        --muted: #526172;
-        --shadow: 0 24px 60px rgba(29, 42, 56, 0.16);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 32%),
-          linear-gradient(135deg, var(--bg-start), var(--bg-end));
-      }
-
-      main {
-        width: min(1200px, calc(100vw - 32px));
-        margin: 0 auto;
-        padding: 40px 0 32px;
-      }
-
-      .hero {
-        margin-bottom: 24px;
-        padding: 28px;
-        border-radius: 24px;
-        background: var(--panel);
-        backdrop-filter: blur(18px);
-        box-shadow: var(--shadow);
-      }
-
-      h1 {
-        margin: 0 0 10px;
-        font-size: clamp(2rem, 4vw, 3.8rem);
-        line-height: 0.95;
-        letter-spacing: -0.04em;
-      }
-
-      p {
-        margin: 0;
-        max-width: 60ch;
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--muted);
-      }
-
-      .frame-shell {
-        padding: 14px;
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.68);
-        box-shadow: var(--shadow);
-      }
-
-      iframe {
-        display: block;
-        width: 100%;
-        height: 70vh;
-        min-height: 540px;
-        border: 0;
-        border-radius: 16px;
-        background: #fff;
-      }
-
-      @media (max-width: 720px) {
-        main {
-          width: min(100vw - 20px, 1200px);
-          padding-top: 20px;
-          padding-bottom: 20px;
-        }
-
-        .hero,
-        .frame-shell {
-          border-radius: 20px;
-        }
-
-        .hero {
-          padding: 22px;
-        }
-
-        iframe {
-          height: 75vh;
-          min-height: 420px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="theme-bridge.js" defer></script>
   </head>
   <body>
-    <main>
-      <section class="hero">
-        <h1>Inspira</h1>
-        <p>
-          Diese Seite bindet deine Anwendung direkt ein und ist so vorbereitet,
-          dass du sie als statische Site bei Cloudflare Pages deployen kannst.
-        </p>
-      </section>
+    <main class="page">
+      <header class="header">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <!-- Logo-Bild hier ändern -->
+            <img
+              class="logo-image"
+              src="https://www.comingwest.de/fileadmin/pfarreien/_processed_/7/e/csm_ST_CHRISTOPH_800x500byP.Kopp_424e700057.jpg"
+              alt="Kirche St. Christoph Friedrichshofen"
+            />
+          </div>
+          <div class="brand-name">Inspira</div>
+        </div>
 
-      <section class="frame-shell">
+        <div class="content-block">
+          <!-- Titel dieser Seite hier ändern -->
+          <h1 class="page-title">Live-Übersetzung</h1>
+
+          <!-- Kurzen Beschreibungstext hier ändern -->
+          <p class="page-description">
+            Hier wird die Übersetzung für Besucherinnen und Besucher direkt
+            eingeblendet. Darstellung und Größe des Livestreams kannst du in
+            der Datei <code>styles.css</code> anpassen. Die Theme-Werte für den
+            Inhalt im <code>iframe</code> stehen dort ebenfalls bereit.
+          </p>
+        </div>
+      </header>
+
+      <section class="frame">
+        <!-- Livestream-URL hier ändern -->
         <iframe
+          id="livestream-frame"
+          class="livestream-frame"
           src="https://inspira-relay.robert-lehmann.workers.dev"
           allow="fullscreen"
           title="Inspira"
