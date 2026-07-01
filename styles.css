@@ -22,15 +22,15 @@
   --frame-border: 1px solid var(--line);
 
   /* Theme-Werte fuer den Inhalt im iframe */
-  --iframe-font-family: Arial, Helvetica, Verdana, sans-serif;
+  --iframe-font-family: "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   --iframe-bg: transparent;
   --iframe-panel: rgba(255, 255, 255, 0.92);
   --iframe-panel-border: rgba(221, 221, 221, 1);
-  --iframe-text: #1f7a1f;
-  --iframe-muted: #2f8f2f;
-  --iframe-accent: #1f7a1f;
-  --iframe-translation-size: clamp(1.3rem, 3vw, 2rem);
-  --iframe-source-size: clamp(1rem, 2vw, 1.1rem);
+  --iframe-text: #111111;
+  --iframe-muted: #555555;
+  --iframe-accent: #111111;
+  --iframe-translation-size: clamp(1.15rem, 2.5vw, 1.75rem);
+  --iframe-source-size: clamp(0.92rem, 1.7vw, 1rem);
 }
 
 * {

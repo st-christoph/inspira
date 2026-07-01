@@ -132,3 +132,22 @@ Wenn nichts passiert, liegt es fast immer daran, dass:
 - der Listener im Worker-Script nicht wirklich ausgefuehrt wird
 - die CSS-Variablen im Worker-HTML noch nicht verwendet werden
 - eine alte Worker-Version noch gecacht ist
+
+## Optional: Session-ID oben ausblenden
+
+Wenn du die Anzeige `Session ...` oben im Worker ausblenden willst, kannst du im
+Worker-CSS diese Regel ergänzen:
+
+```css
+#sessionHint {
+  display: none;
+}
+```
+
+Falls du auch die Sequenznummern in jedem Eintrag ausblenden willst:
+
+```css
+.sequence {
+  display: none;
+}
+```
