@@ -26,9 +26,9 @@
   --iframe-bg: transparent;
   --iframe-panel: rgba(255, 255, 255, 0.92);
   --iframe-panel-border: rgba(221, 221, 221, 1);
-  --iframe-text: #333333;
-  --iframe-muted: #777777;
-  --iframe-accent: #aa233f;
+  --iframe-text: #1f7a1f;
+  --iframe-muted: #2f8f2f;
+  --iframe-accent: #1f7a1f;
   --iframe-translation-size: clamp(1.3rem, 3vw, 2rem);
   --iframe-source-size: clamp(1rem, 2vw, 1.1rem);
 }
